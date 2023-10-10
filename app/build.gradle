@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'reunion.corp'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "reunion.corp"
@@ -39,5 +39,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation  'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
 
 }

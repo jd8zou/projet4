@@ -38,7 +38,7 @@ public class MainActivity extends BaseActivity {
         MeetFragment fragment = new MeetFragment();
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(binding.containerMain, fragment)
+                .add(R.id.container_main, fragment)
                 .commit();
     }
 

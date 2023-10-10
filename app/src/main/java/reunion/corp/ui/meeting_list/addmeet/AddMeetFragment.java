@@ -1,6 +1,6 @@
 package reunion.corp.ui.meeting_list.addmeet;
 
-import static com.sn.maru.utilities.Utils.isEmailValid;
+import static reunion.corp.utilities.Utils.isEmailValid;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,14 +21,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
-import com.sn.maru.R;
-import com.sn.maru.base.BaseActivity;
-import com.sn.maru.model.Meeting;
-import com.sn.maru.model.Room;
-import com.sn.maru.repository.MeetingRepository;
-import com.sn.maru.utilities.DialogContributorSelectorFragment;
-import com.sn.maru.utilities.DialogDatePickerFragment;
-import com.sn.maru.utilities.DialogTimePickerFragment;
+import reunion.corp.R;
+import reunion.corp.base.BaseActivity;
+import reunion.corp.model.Meeting;
+import reunion.corp.model.Room;
+import reunion.corp.repository.MeetingRepository;
+import reunion.corp.utilities.DialogContributorSelectorFragment;
+import reunion.corp.utilities.DialogDatePickerFragment;
+import reunion.corp.utilities.DialogTimePickerFragment;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -44,19 +44,19 @@ public class AddMeetFragment extends Fragment
         DialogContributorSelectorFragment.DialogContributorListener,
         DialogDatePickerFragment.DialogDatePickerListener {
 
-    @BindView(R.id.create_meeting_subject_et)
+    //@BindView(R.id.create_meeting_subject_et)
     TextView mMeetingSubject;
-    @BindView(R.id.time_selector_btn)
+    //@BindView(R.id.time_selector_btn)
     Button mMeetingSelectTime;
-    @BindView(R.id.roomSpinner_sp)
+    //@BindView(R.id.roomSpinner_sp)
     Spinner mMeetingRoom;
-    @BindView(R.id.contributor_selector_btn)
+    //@BindView(R.id.contributor_selector_btn)
     Button mContributorSelector;
-    @BindView(R.id.add_save)
+    //@BindView(R.id.add_save)
     Button mCreateMeetingBtn;
-    @BindView(R.id.list_contributor)
+    //@BindView(R.id.list_contributor)
     TextView mContributorList;
-    @BindView(R.id.date_selector_btn)
+    //@BindView(R.id.date_selector_btn)
     Button mDateSelectorBtn;
 
     public MeetingRepository mMeetingRepository;
@@ -112,7 +112,7 @@ public class AddMeetFragment extends Fragment
         mDateSelectorBtn.setTag(TAG_BUTTON_DATE);
     }
 
-    @OnClick(R.id.add_return)
+    //@OnClick(R.id.add_return)
     public void navigateUp(View view) {
         requireActivity().finish();
     }

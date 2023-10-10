@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.sn.maru.R;
+import reunion.corp.R;
 
 public class DialogTimePickerFragment extends DialogFragment {
 

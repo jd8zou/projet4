@@ -24,6 +24,16 @@ import java.util.List;
 public class MeetingItemViewHolder extends RecyclerView.ViewHolder {
     private MeetingItemBinding binding;
 
+
+    // @BindView(R.id.item_list_title)
+    TextView meet;
+    //@BindView(R.id.item_list_pastil)
+    ImageView color;
+    //@BindView(R.id.delete_item_iv)
+    ImageView delete;
+    //@BindView(R.id.item_mail_list)
+    TextView mails;
+
     private String mail = "";
 
     public MeetingItemViewHolder(@NonNull View itemView) {
