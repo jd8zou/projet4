@@ -7,10 +7,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewbinding.ViewBinding;
 
-import reunion.corp.R;
-import reunion.corp.databinding.MainActivityBinding;
 import reunion.corp.databinding.MeetingItemBinding;
 import reunion.corp.model.Meeting;
 import reunion.corp.utilities.DeleteEvent;
@@ -22,8 +19,8 @@ import java.util.List;
 
 
 public class MeetingItemViewHolder extends RecyclerView.ViewHolder {
-    private MeetingItemBinding binding;
 
+    private MeetingItemBinding binding;
 
     // @BindView(R.id.item_list_title)
     TextView meet;
@@ -36,12 +33,11 @@ public class MeetingItemViewHolder extends RecyclerView.ViewHolder {
 
     private String mail = "";
 
-    public MeetingItemViewHolder(@NonNull View itemView) {
-
-        super(itemView);
-
-        MeetingItemBinding.bind(this, itemView);
+    public MeetingItemViewHolder(MeetingItemBinding binding) {
+        super(binding.getRoot());
+        this.binding = binding;
     }
+
 
     public void update(Meeting meeting) {
         this.binding.itemListPastil.getDrawable().setTint(Color.parseColor(meeting.getRoom().getColor()));

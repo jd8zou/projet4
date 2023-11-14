@@ -27,8 +27,8 @@ public class MainActivity extends BaseActivity {
         View view = binding.getRoot();
         setContentView(view);
         configureFragment();
-        configureToolbar();
-        configureFABAddMeeting();
+       /** configureToolbar();
+        configureFABAddMeeting();*/
     }
 
     /**

@@ -9,11 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import reunion.corp.R;
+import reunion.corp.databinding.MeetingItemBinding;
 import reunion.corp.model.Meeting;
 
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<MeetingItemViewHolder> {
+    private MeetingItemBinding binding;
+
 
     public List<Meeting> mMeeting;
 
@@ -24,10 +27,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<MeetingItemViewHol
     @NonNull
     @Override
     public MeetingItemViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+
         Context context = viewGroup.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.meeting_item, viewGroup, false);
-        return new MeetingItemViewHolder(view);
+        binding = MeetingItemBinding.inflate(inflater, viewGroup, false);
+        return new MeetingItemViewHolder(binding);
     }
 
     public void updateList(List<Meeting> meetingList) {

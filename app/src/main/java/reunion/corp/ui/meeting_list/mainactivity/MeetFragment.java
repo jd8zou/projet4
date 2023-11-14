@@ -33,7 +33,7 @@ import java.util.Date;
 
 public class MeetFragment extends Fragment implements DialogDatePickerFragment.DialogDatePickerListener,
         DialogPlaceSpinner.DialogPlaceSpinnerListener {
-
+    
     private MeetingRepository mMeetingRepository;
     private RecyclerView mRecyclerView;
     private RecyclerViewAdapter adapter;
@@ -76,7 +76,20 @@ public class MeetFragment extends Fragment implements DialogDatePickerFragment.D
         });
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case  R.id.filter_by_date_item:
+                showDatePikerDialog();
+                return true;
+            case R.id.filter_by_place_item:
+                showSpinnerPlaceDialog();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @SuppressLint("RestrictedApi")
     private void filterListByDate(String dateString) {
